@@ -1,0 +1,17 @@
+int main(void):
+    sub.w,#12 SP
+    mow.w #3,4(SP)
+    mow.w #5,6(SP)
+    mow.w #4,2(SP)
+    mow.w #5,8(SP)
+    mow.w 4(SP),R14
+    add.w 4(SP),R14
+    add.w 2(SP),R14
+    mow.w 8(SP),R12
+    mow.w 6(SP),R13
+    CALL #__mspabi_mpyi
+    add.w R12,R14
+    mow.w R14,4(SP)
+    add.w #12,SP
+    mow.b #0,R12
+    RET
